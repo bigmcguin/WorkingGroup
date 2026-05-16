@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Working Group · The Renegades</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Hanken+Grotesk:ital,wght@0,300..800;1,300..600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --white: #FFFFFF;
+  --paper: #FAFAF6;
+  --ink: #0F0F12;
+  --ink-soft: #2A2A30;
+  --muted: #6E6E76;
+  --navy: #00264D;
+  --navy-deep: #001A33;
+  --red: #E63027;
+  --red-dark: #B81F18;
+  --rule: rgba(15, 15, 18, 0.10);
+  --rule-soft: rgba(15, 15, 18, 0.06);
+  --rule-strong: rgba(15, 15, 18, 0.25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4.5rem);
+}
+
+/* ─── TOP NAV ─────────────────────────────────────── */
+.topnav {
+  padding: 1.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--rule);
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.topnav .crest { display: flex; align-items: center; gap: 0.7rem; color: var(--ink); }
+.topnav .crest .dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+}
+
+.topnav nav { display: flex; gap: 2rem; }
+.topnav nav a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.25s;
+  position: relative;
+  padding-bottom: 4px;
+}
+.topnav nav a:hover { color: var(--ink); }
+.topnav nav a.active { color: var(--ink); }
+.topnav nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 2px;
+  background: var(--red);
+}
+
+/* ─── HERO ─────────────────────────────────────────── */
+header.hero {
+  padding: clamp(4rem, 10vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
+}
+
+.eyebrow {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 32px; height: 2px;
+  background: var(--red);
+}
+
+h1.title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  font-variation-settings: 'opsz' 96, 'wdth' 100;
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.93;
+  letter-spacing: -0.04em;
+  color: var(--navy);
+  max-width: 14ch;
+}
+
+h1.title .accent { color: var(--red); font-weight: 500; }
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2.5rem;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  max-width: 980px;
+}
+
+.hero-meta dt {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 0.7rem;
+}
+
+.hero-meta dd {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+/* ─── SECTION LABEL ───────────────────────────────── */
+.section-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+/* ─── PILLARS ──────────────────────────────────────── */
+.pillars {
+  padding: clamp(4rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4.5rem);
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  margin: 0 calc(-1 * clamp(1.5rem, 5vw, 4.5rem));
+}
+
+.pillars-inner { max-width: 1360px; margin: 0 auto; }
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+}
+
+.pillar { position: relative; }
+
+.pillar-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 300;
+  font-variation-settings: 'opsz' 72;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--red);
+  letter-spacing: -0.04em;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.pillar h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  font-variation-settings: 'opsz' 48;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.pillar p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 32ch;
+}
+
+/* ─── MEMBERS ──────────────────────────────────────── */
+.members { padding: clamp(4rem, 8vw, 6rem) 0; }
+
+.member {
+  display: grid;
+  grid-template-columns: clamp(80px, 8vw, 120px) 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.member:first-of-type { border-top-color: var(--rule-strong); border-top-width: 2px; }
+.member:last-child { border-bottom: 2px solid var(--rule-strong); }
+
+.member-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 300;
+  font-variation-settings: 'opsz' 72;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 0.9;
+  color: var(--red);
+  letter-spacing: -0.04em;
+}
+
+.member-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+}
+
+.member-id .name {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-variation-settings: 'opsz' 48;
+  font-size: clamp(1.65rem, 2.6vw, 2.2rem);
+  line-height: 1.0;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.member-id .role {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+.member-id .company {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+}
+
+.member-stat {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: fit-content;
+}
+
+.stat-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  font-variation-settings: 'opsz' 48;
+  font-size: clamp(1.85rem, 2.6vw, 2.4rem);
+  line-height: 1;
+  color: var(--red);
+  letter-spacing: -0.035em;
+  min-width: 1.5ch;
+}
+
+.stat-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.member-bio {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.97rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.member-bio p + p { margin-top: 1rem; }
+
+/* ─── FOOTER ───────────────────────────────────────── */
+footer.foot {
+  margin-top: 3rem;
+  padding: clamp(3rem, 6vw, 5rem) 0 3rem;
+  border-top: 2px solid var(--navy);
+}
+
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: end;
+}
+
+.foot-quote {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  font-variation-settings: 'opsz' 72;
+  font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  max-width: 28ch;
+}
+
+.foot-quote .em { color: var(--red); }
+
+.foot-meta {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: right;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.foot-cta {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.foot-cta a {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  font-variation-settings: 'opsz' 48;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  letter-spacing: -0.02em;
+  color: var(--red);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: color 0.25s;
+}
+
+.foot-cta a:hover { color: var(--red-dark); }
+.foot-cta .arrow { display: inline-block; transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1); }
+.foot-cta a:hover .arrow { transform: translateX(8px); }
+
+.foot-cta .next-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* ─── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 760px) {
+  .member { grid-template-columns: 1fr; gap: 1rem; }
+  .member-content { grid-template-columns: 1fr; gap: 1.25rem; }
+  .topnav { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .topnav nav { gap: 1.5rem; }
+  .foot-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .foot-meta { text-align: left; }
+}
+
+@keyframes riseUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+header.hero > * { animation: riseUp 0.8s cubic-bezier(0.2, 0.7, 0.3, 1) backwards; }
+header.hero .eyebrow { animation-delay: 0.05s; }
+header.hero h1.title { animation-delay: 0.2s; }
+header.hero .hero-meta { animation-delay: 0.4s; }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="topnav">
+    <div class="crest"><span class="dot"></span> The Renegades</div>
+    <nav>
+      <a href="index.html" class="active">Working Group</a>
+      <a href="initiatives.html">Initiatives</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <span class="eyebrow">National Board · Working Group</span>
+    <h1 class="title">Shaping the <span class="accent">next chapter</span> of the Australian caravan industry.</h1>
+    <dl class="hero-meta">
+      <div>
+        <dt>Charter</dt>
+        <dd>Support the National Board on the three strategic pillars the group is committed to advance.</dd>
+      </div>
+      <div>
+        <dt>Composition</dt>
+        <dd>Eight industry leaders spanning manufacturing, retail, technology, insurance, marketing and park management.</dd>
+      </div>
+      <div>
+        <dt>Established</dt>
+        <dd>May 2026</dd>
+      </div>
+    </dl>
+  </header>
+
+  <section class="pillars" id="pillars">
+    <div class="pillars-inner">
+      <div class="section-label">Strategic Pillars</div>
+      <div class="pillars-grid">
+        <div class="pillar">
+          <h3>Leadership &amp; Development</h3>
+          <p>Investing in the people who will lead the industry through the next decade of change.</p>
+        </div>
+        <div class="pillar">
+          <h3>End-to-end Customer Experience</h3>
+          <p>Closing the gaps from first enquiry to lifelong caravanner — every touchpoint matters.</p>
+        </div>
+        <div class="pillar">
+          <h3>Innovation &amp; Future-proofing</h3>
+          <p>Anticipating the shifts in product, energy, technology and customer expectations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="members" id="members">
+    <div class="section-label">The Group</div>
+
+    <article class="member">
+      <div class="member-num">01</div>
+      <div class="member-content">
+        <div class="member-id">
+          <div class="name">Amanda Dempster</div>
+          <div class="role">Agency Owner</div>
+          <div class="company">Milk Creative (Create Milk)</div>
+          <div class="member-stat">
+            <span class="stat-num">10</span>
+            <span class="stat-label">years in the<br>caravan industry</span>
+          </div>
+        </div>
+        <div class="member-bio">
+          <p>Amanda is an award-winning brand designer, tourism and AI marketing expert, and owner of Milk Creative — a marketing and branding agency based in Brisbane, Queensland. With more than 20 years of experience working directly with clients and running agencies, she helps businesses lift their exposure, strengthen their brands, and grow direct bookings and sales.</p>
+          <p>Her work has earned numerous accolades, including the Gerry Ryan OAM INNOVATION Award (2025) and the Future Leader Award (2025) from the Caravan Industry of Australia, as well as the A'Design Award for Graphics, Illustration and Visual Communication Design (International 2022–23). Amanda also owns Stanthorpe Holiday Park.</p>
+        </div>
+      </div>
+    </article>
+    <article class="member">
+      <div class="member-num">02</div>
+      <div class="member-content">
+        <div class="member-id">
+          <div class="name">James Field</div>
+          <div class="role">General Manager — Commercial &amp; Product</div>
+          <div class="company">Market Direct Group</div>
+          <div class="member-stat">
+            <span class="stat-num">20</span>
+            <span class="stat-label">years in the<br>caravan industry</span>
+          </div>
+        </div>
+        <div class="member-bio">
+          <p>James is General Manager of Commercial and Product at Market Direct Group (MDG), a leader in adventure-ready campers and caravans based in Coopers Plains, Queensland. With nearly 20 years of experience in the caravan and RV sector, James began his career in hands-on workshop roles before moving into technical training and compliance.</p>
+          <p>Prior to joining MDG in 2021, he served as Chief Technical Officer for the Caravan Industry Association of Australia. At MDG he leads commercial strategy, product development, and technical standards across the company's brands in Australia and the US. He was named an honouree in RV PRO magazine's '40 under 40' Class of 2024.</p>
+        </div>
+      </div>
+    </article>
+    <article class="member">
+      <div class="member-num">03</div>
+      <div class="member-content">
+        <div class="member-id">
+          <div class="name">Blake Gray</div>
+          <div class="role">Sales Manager</div>
+          <div class="company">Viscount, Concept &amp; Newlands Caravans</div>
+          <div class="member-stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">years in the<br>caravan industry</span>
+          </div>
+        </div>
+        <div class="member-bio">
+          <p>Blake is Sales Manager for Viscount, Concept and Newlands Caravans, based in Melbourne, Victoria. With a business degree from a Melbourne university, Blake began his sales career in London before returning to Australia to join the dealership sales team at Concept Caravans in 2017. He quickly transitioned into the mainstream manufacturing side of the business.</p>
+          <p>In his current role, Blake oversees sales and marketing, purchasing, customer service, warranty, production planning and operations across a network of 11 dealerships. He is passionate about championing the caravanning lifestyle and adapting to both local and global market trends. His dedication and innovative approach to the RV industry earned him a nomination for the Future Leaders Award by the Caravan Industry Association of Australia in 2025.</p>
+        </div>
+      </div>
+    </article>
+    <article class="member">
+      <div class="member-num">04</div>
+      <div class="member-content">
+        <div class="member-id">
+          <div class="name">Jack Hillis</div>
+          <div class="role">Managing Director &amp; General Manager</div>
+          <div class="company">Wagga Caravan Centre</div>
+          <div class="member-stat">
+            <span class="stat-num">10</span>
+            <span class="stat-label">years in the<br>caravan industry</span>
+          </div>
+        </div>
+        <div class="member-bio">
+          <p>Jack is the Managing Director and General Manager of Wagga Caravan Centre, a family-owned dealership based in Wagga Wagga, NSW. The Hillis family has a long-standing business presence in the region dating back to 1967, and Jack represents the third generation to build and operate businesses in the area.</p>
+          <p>Starting his career as an aircraft maintenance engineer, Jack joined the family business in 2017 and applied the rigour of his engineering background to the dealership's operations. Under his leadership, the business has grown from 8 to more than 20 staff. Wagga Caravan Centre specialises in quality Australian-made caravans and campers, and operates one of the largest and most specialised caravan workshops in the country. Jack was named a Future Leader Finalist at the National Caravan Conference.</p>
+        </div>
+      </div>
+    </article>
+    <article class="member">
+      <div class="member-num">05</div>
+      <div class="member-content">
+        <div class="member-id">
+          <div class="name">Ben Johnson</div>
+          <div class="role">General Manager</div>
+          <div class="company">K-Mac Powerheads</div>
+          <div class="member-stat">
+            <span class="stat-num">6</span>
+            <span class="stat-label">years in the<br>caravan industry</span>
+          </div>
+        </div>
+        <div class="member-bio">
+          <p>Ben is General Manager at K-Mac Powerheads, Australia's leading provider of powerheads and power solutions for caravan parks, commercial lots, and residential properties. Based in South Geelong, Victoria, the company designs and builds metered and unmetered site power pedestals.</p>
+          <p>Ben is highly regarded in the industry and was awarded the David Pratt Unsung Hero Award by Caravan &amp; Residential Parks Victoria, which recognises individuals who go above and beyond to positively impact the industry. He was also a finalist for the 2026 Caravan Industry Awards. Ben frequently shares his expertise as a speaker at industry events, including on EV and e-bike charging requirements.</p>
+        </div>
+      </div>
+    </article>
+    <article class="member">
+      <div class="member-num">06</div>
+      <div class="member-content">
+        <div class="member-id">
+          <div class="name">Ben McInnes</div>
+          <div class="role">Managing Director</div>
+          <div class="company">MHIA Insurance</div>
+          <div class="member-stat">
+            <span class="stat-num">11</span>
+            <span class="stat-label">years in the<br>caravan industry</span>
+          </div>
+        </div>
+        <div class="member-bio">
+          <p>Ben is Managing Director of MHIA Insurance, a specialist home and contents insurer based in Tuggerah, NSW. With more than 30 years of experience, MHIA provides bespoke policies for people residing in manufactured home estates, permanent cabins, and on-site caravans across Australia.</p>
+          <p>Ben brings over 16 years of experience in the insurance industry to his role. Under his leadership the company has continued to thrive, recently bringing on Glenn McGrath as Brand Ambassador. Ben's professional excellence was recognised when he was awarded ANZIIF's Young Insurance Professional of the Year in 2025.</p>
+        </div>
+      </div>
+    </article>
+    <article class="member">
+      <div class="member-num">07</div>
+      <div class="member-content">
+        <div class="member-id">
+          <div class="name">Sam Reynolds</div>
+          <div class="role">Founder, Owner &amp; Director</div>
+          <div class="company">Offline Campers</div>
+          <div class="member-stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">years in the<br>caravan industry</span>
+          </div>
+        </div>
+        <div class="member-bio">
+          <p>Sam is the Founder, Owner and Director of Offline Campers, an Australian manufacturer of premium off-road camper trailers and hybrid caravans based in Elizabeth, South Australia. With a background in engineering, Sam started the company with his wife Jenna after finding that existing camper trailers didn't meet their family's needs for simple comforts and luxury.</p>
+          <p>He used his skills to design and build his own camper trailers, launching his first product — the RAKER — in 2018 after two years of research and development. The company's innovative designs have been highly successful, with the DOMINO model winning Most Innovative and Best Hybrid Camper at the 2021 Brisbane Camper Trailer of the Year awards.</p>
+        </div>
+      </div>
+    </article>
+    <article class="member">
+      <div class="member-num">08</div>
+      <div class="member-content">
+        <div class="member-id">
+          <div class="name">Erin Stevenson</div>
+          <div class="role">VP Growth &amp; Client Experience</div>
+          <div class="company">Newbook</div>
+          <div class="member-stat">
+            <span class="stat-num">13</span>
+            <span class="stat-label">years in the<br>caravan industry</span>
+          </div>
+        </div>
+        <div class="member-bio">
+          <p>Erin is VP of Growth and Client Experience (formerly Chief Operations Officer) at Newbook, a cloud-based property management system for the accommodation industry, with offices in West Hollywood, California. Newbook delivers market-leading hospitality management software for holiday parks, hotels and vacation rentals.</p>
+          <p>Erin has had a significant tenure with the company, progressing through several key roles and playing a pivotal part in propelling Newbook's growth from a tech start-up to a leading hospitality platform. She combines hands-on experience with a sharp focus on digital transformation, and is recognised as a future leader of the industry. She is actively involved in the Newbook Emerging Leaders Scholarship and frequently shares her insights at industry events, including masterclasses at the VicParks Conference and the Friends of Caravanning event at Australian Parliament House.</p>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <footer class="foot">
+    <div class="foot-grid">
+      <div class="foot-quote">
+        A great hand-over is the first chapter of a <span class="em">lifelong relationship</span> with the open road.
+      </div>
+      <div class="foot-meta">
+        The Renegades<br>
+        A working group of the<br>
+        Caravan Industry Association<br>
+        of Australia — 2026
+      </div>
+    </div>
+    <div class="foot-cta">
+      <span class="next-label">Next →</span>
+      <a href="initiatives.html">The two foundational initiatives <span class="arrow">→</span></a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
