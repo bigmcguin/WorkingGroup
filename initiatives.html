@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en-AU">
 <head>
 <meta charset="UTF-8">
@@ -24,489 +23,489 @@
   --rule-strong: rgba(15, 15, 18, 0.25);
 }
 
-- { margin: 0; padding: 0; box-sizing: border-box; }
-  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
 
 body {
-background: var(–white);
-color: var(–ink);
-font-family: ‘Hanken Grotesk’, system-ui, sans-serif;
-font-size: 16px;
-line-height: 1.55;
-font-weight: 400;
-min-height: 100vh;
+  background: var(--white);
+  color: var(--ink);
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+  min-height: 100vh;
 }
 
 .container {
-max-width: 1360px;
-margin: 0 auto;
-padding: 0 clamp(1.5rem, 5vw, 4.5rem);
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 4.5rem);
 }
 
 /* ─── TOP NAV ─────────────────────────────────────── */
 .topnav {
-padding: 1.75rem 0;
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-bottom: 1px solid var(–rule);
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.72rem;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-font-weight: 500;
+  padding: 1.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--rule);
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-.topnav .crest { display: flex; align-items: center; gap: 0.7rem; color: var(–ink); }
+.topnav .crest { display: flex; align-items: center; gap: 0.7rem; color: var(--ink); }
 .topnav .crest .dot {
-display: inline-block;
-width: 8px; height: 8px;
-background: var(–red);
-border-radius: 50%;
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--red);
+  border-radius: 50%;
 }
 
 .topnav nav { display: flex; gap: 2rem; }
 .topnav nav a {
-color: var(–muted);
-text-decoration: none;
-transition: color 0.25s;
-position: relative;
-padding-bottom: 4px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.25s;
+  position: relative;
+  padding-bottom: 4px;
 }
-.topnav nav a:hover { color: var(–ink); }
-.topnav nav a.active { color: var(–ink); }
+.topnav nav a:hover { color: var(--ink); }
+.topnav nav a.active { color: var(--ink); }
 .topnav nav a.active::after {
-content: ‘’;
-position: absolute;
-bottom: -1px; left: 0; right: 0;
-height: 2px;
-background: var(–red);
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 2px;
+  background: var(--red);
 }
 
 /* ─── HERO ─────────────────────────────────────────── */
 header.hero { padding: clamp(4rem, 10vw, 8rem) 0 clamp(3rem, 6vw, 5rem); }
 
 .eyebrow {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.72rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-font-weight: 600;
-color: var(–red);
-display: inline-flex;
-align-items: center;
-gap: 0.85rem;
-margin-bottom: 2.5rem;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
 }
 
-.eyebrow::before { content: ‘’; width: 32px; height: 2px; background: var(–red); }
+.eyebrow::before { content: ''; width: 32px; height: 2px; background: var(--red); }
 
 h1.title {
-font-family: ‘Plus Jakarta Sans’, sans-serif;
-font-weight: 700;
-font-size: clamp(2.75rem, 9vw, 7rem);
-line-height: 0.93;
-letter-spacing: -0.04em;
-color: var(–navy);
-max-width: 18ch;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.75rem, 9vw, 7rem);
+  line-height: 0.93;
+  letter-spacing: -0.04em;
+  color: var(--navy);
+  max-width: 18ch;
 }
 
-h1.title .accent { color: var(–red); font-weight: 500; }
+h1.title .accent { color: var(--red); font-weight: 500; }
 
 .hero-lede {
-margin-top: 3rem;
-max-width: 64ch;
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-weight: 400;
-font-size: clamp(1.05rem, 1.4vw, 1.2rem);
-line-height: 1.55;
-color: var(–ink-soft);
+  margin-top: 3rem;
+  max-width: 64ch;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.55;
+  color: var(--ink-soft);
 }
 
 /* ─── SECTION LABEL ───────────────────────────────── */
 .section-label {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.72rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-font-weight: 600;
-color: var(–red);
-margin-bottom: 3rem;
-display: flex;
-align-items: center;
-gap: 1.5rem;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .section-label::after {
-content: ‘’;
-flex: 1;
-height: 1px;
-background: var(–rule);
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
 }
 
 /* ─── INITIATIVE ──────────────────────────────────── */
 .initiative {
-padding: clamp(4rem, 8vw, 6rem) 0;
-border-top: 1px solid var(–rule);
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  border-top: 1px solid var(--rule);
 }
 
 .initiative.alt {
-background: var(–paper);
-padding-left: clamp(1.5rem, 5vw, 4.5rem);
-padding-right: clamp(1.5rem, 5vw, 4.5rem);
-margin: 0 calc(-1 * clamp(1.5rem, 5vw, 4.5rem));
+  background: var(--paper);
+  padding-left: clamp(1.5rem, 5vw, 4.5rem);
+  padding-right: clamp(1.5rem, 5vw, 4.5rem);
+  margin: 0 calc(-1 * clamp(1.5rem, 5vw, 4.5rem));
 }
 
 .initiative-inner { max-width: 1360px; margin: 0 auto; }
 
 .initiative-header {
-display: grid;
-grid-template-columns: clamp(110px, 12vw, 180px) 1fr;
-gap: clamp(1.5rem, 4vw, 3.5rem);
-margin-bottom: 4rem;
-align-items: start;
+  display: grid;
+  grid-template-columns: clamp(110px, 12vw, 180px) 1fr;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-bottom: 4rem;
+  align-items: start;
 }
 
 .init-num {
-font-family: ‘Plus Jakarta Sans’, sans-serif;
-font-weight: 300;
-font-size: clamp(5rem, 11vw, 10rem);
-line-height: 0.85;
-color: var(–red);
-letter-spacing: -0.05em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+  font-size: clamp(5rem, 11vw, 10rem);
+  line-height: 0.85;
+  color: var(--red);
+  letter-spacing: -0.05em;
 }
 
 .init-tag {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.72rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-font-weight: 600;
-color: var(–red);
-margin-bottom: 1.25rem;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 1.25rem;
 }
 
 .init-title {
-font-family: ‘Plus Jakarta Sans’, sans-serif;
-font-weight: 700;
-font-size: clamp(2rem, 5vw, 3.75rem);
-line-height: 0.96;
-letter-spacing: -0.035em;
-color: var(–navy);
-margin-bottom: 1.5rem;
-max-width: 22ch;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+  max-width: 22ch;
 }
 
-.init-title .accent { color: var(–red); }
+.init-title .accent { color: var(--red); }
 
 .init-lede {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-weight: 400;
-font-size: clamp(1.05rem, 1.5vw, 1.25rem);
-line-height: 1.5;
-color: var(–ink-soft);
-max-width: 60ch;
-margin-top: 1.5rem;
-padding-top: 1.5rem;
-border-top: 1px solid var(–rule);
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
 }
 
 /* ─── CONTEXT GRID ────────────────────────────────── */
 .context-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 2.5rem;
-padding: 2.5rem 0;
-margin-bottom: 4rem;
-border-top: 2px solid var(–rule-strong);
-border-bottom: 1px solid var(–rule);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+  margin-bottom: 4rem;
+  border-top: 2px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule);
 }
 
 .context-item dt {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.7rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-font-weight: 600;
-color: var(–red);
-margin-bottom: 0.7rem;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 0.7rem;
 }
 
 .context-item dd {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.95rem;
-line-height: 1.55;
-color: var(–ink);
-font-weight: 400;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink);
+  font-weight: 400;
 }
 
 /* ─── JOURNEY MAP ─────────────────────────────────── */
 .journey-block { margin: 4rem 0; }
 
 .journey-title {
-font-family: ‘Plus Jakarta Sans’, sans-serif;
-font-weight: 700;
-font-size: clamp(1.5rem, 2.5vw, 2.1rem);
-line-height: 1.1;
-letter-spacing: -0.025em;
-color: var(–navy);
-margin-bottom: 0.5rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
 }
 
 .journey-subtitle {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.95rem;
-color: var(–muted);
-margin-bottom: 3rem;
-max-width: 56ch;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 3rem;
+  max-width: 56ch;
 }
 
 .journey {
-display: grid;
-grid-template-columns: repeat(7, minmax(140px, 1fr));
-gap: 0;
-position: relative;
-overflow-x: auto;
-padding-bottom: 1rem;
-scrollbar-width: thin;
-scrollbar-color: var(–red) transparent;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(140px, 1fr));
+  gap: 0;
+  position: relative;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--red) transparent;
 }
 
 .journey-stage {
-position: relative;
-padding: 2.75rem 1rem 0 0;
-padding-right: 1rem;
+  position: relative;
+  padding: 2.75rem 1rem 0 0;
+  padding-right: 1rem;
 }
 
 .journey-stage::before {
-content: ‘’;
-position: absolute;
-top: 6px;
-left: 0;
-width: 14px;
-height: 14px;
-background: var(–white);
-border: 2px solid var(–red);
-border-radius: 50%;
-z-index: 2;
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: var(--white);
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  z-index: 2;
 }
 
 .journey-stage::after {
-content: ‘’;
-position: absolute;
-top: 12px;
-left: 14px;
-right: 0;
-height: 2px;
-background: var(–red);
-opacity: 0.35;
-z-index: 1;
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  right: 0;
+  height: 2px;
+  background: var(--red);
+  opacity: 0.35;
+  z-index: 1;
 }
 
 .journey-stage:last-child::after { display: none; }
 
 .stage-num {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.65rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-font-weight: 600;
-color: var(–red);
-margin-bottom: 0.5rem;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--red);
+  margin-bottom: 0.5rem;
 }
 
 .stage-label {
-font-family: ‘Plus Jakarta Sans’, sans-serif;
-font-weight: 700;
-font-size: 1.1rem;
-line-height: 1.1;
-color: var(–navy);
-margin-bottom: 0.6rem;
-letter-spacing: -0.02em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.1;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
 }
 
 .stage-desc {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.82rem;
-line-height: 1.45;
-color: var(–ink-soft);
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
 }
 
 .stage-pain {
-margin-top: 0.7rem;
-padding-top: 0.7rem;
-border-top: 1px solid var(–rule);
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-style: italic;
-font-size: 0.78rem;
-line-height: 1.4;
-color: var(–red);
-font-weight: 400;
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--rule);
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--red);
+  font-weight: 400;
 }
 
 /* ─── WORKSTREAM LIST ─────────────────────────────── */
 .workstreams { margin-top: 4rem; }
 
 .workstreams-intro {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 1.05rem;
-line-height: 1.6;
-color: var(–ink-soft);
-margin-bottom: 3rem;
-max-width: 64ch;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin-bottom: 3rem;
+  max-width: 64ch;
 }
 
 .workstream {
-display: grid;
-grid-template-columns: clamp(60px, 6vw, 90px) 1fr;
-gap: clamp(1.25rem, 3vw, 2.5rem);
-padding: 2.25rem 0;
-border-top: 1px solid var(–rule);
+  display: grid;
+  grid-template-columns: clamp(60px, 6vw, 90px) 1fr;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--rule);
 }
 
-.workstream:first-of-type { border-top-color: var(–rule-strong); border-top-width: 2px; }
-.workstream:last-child { border-bottom: 2px solid var(–rule-strong); }
+.workstream:first-of-type { border-top-color: var(--rule-strong); border-top-width: 2px; }
+.workstream:last-child { border-bottom: 2px solid var(--rule-strong); }
 
 .ws-num {
-font-family: ‘Plus Jakarta Sans’, sans-serif;
-font-weight: 300;
-font-size: clamp(1.6rem, 2.4vw, 2.1rem);
-line-height: 1;
-color: var(–red);
-letter-spacing: -0.03em;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+  line-height: 1;
+  color: var(--red);
+  letter-spacing: -0.03em;
 }
 
 .ws-content {
-display: grid;
-grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
-gap: clamp(1.5rem, 4vw, 3rem);
-align-items: start;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
 }
 
 .ws-title {
-font-family: ‘Plus Jakarta Sans’, sans-serif;
-font-weight: 700;
-font-size: clamp(1.2rem, 1.9vw, 1.55rem);
-line-height: 1.15;
-letter-spacing: -0.025em;
-color: var(–navy);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--navy);
 }
 
 .ws-tasks {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.95rem;
-line-height: 1.65;
-color: var(–ink-soft);
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
 }
 
 .ws-tasks li {
-list-style: none;
-padding-left: 1.5rem;
-position: relative;
-margin-bottom: 0.5rem;
+  list-style: none;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
 }
 
 .ws-tasks li::before {
-content: ‘’;
-position: absolute;
-left: 0;
-top: 0.65em;
-width: 10px;
-height: 2px;
-background: var(–red);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 10px;
+  height: 2px;
+  background: var(--red);
 }
 
 /* ─── FOOTER ───────────────────────────────────────── */
 footer.foot {
-margin-top: 3rem;
-padding: clamp(3rem, 6vw, 5rem) 0 3rem;
-border-top: 2px solid var(–navy);
+  margin-top: 3rem;
+  padding: clamp(3rem, 6vw, 5rem) 0 3rem;
+  border-top: 2px solid var(--navy);
 }
 
 .foot-grid {
-display: grid;
-grid-template-columns: 1fr auto;
-gap: 2rem;
-align-items: end;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: end;
 }
 
 .foot-quote {
-font-family: ‘Plus Jakarta Sans’, sans-serif;
-font-weight: 700;
-font-size: clamp(1.4rem, 2.6vw, 2.2rem);
-line-height: 1.2;
-letter-spacing: -0.02em;
-color: var(–navy);
-max-width: 32ch;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  max-width: 32ch;
 }
 
-.foot-quote .em { color: var(–red); }
+.foot-quote .em { color: var(--red); }
 
 .foot-meta {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.72rem;
-letter-spacing: 0.16em;
-text-transform: uppercase;
-font-weight: 500;
-text-align: right;
-color: var(–muted);
-line-height: 1.9;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: right;
+  color: var(--muted);
+  line-height: 1.9;
 }
 
 .foot-cta {
-margin-top: 3rem;
-padding-top: 2rem;
-border-top: 1px solid var(–rule);
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .foot-cta a {
-font-family: ‘Plus Jakarta Sans’, sans-serif;
-font-weight: 700;
-font-size: clamp(1.2rem, 2vw, 1.6rem);
-letter-spacing: -0.02em;
-color: var(–red);
-text-decoration: none;
-display: inline-flex;
-align-items: center;
-gap: 0.6rem;
-transition: color 0.25s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  letter-spacing: -0.02em;
+  color: var(--red);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: color 0.25s;
 }
-.foot-cta a:hover { color: var(–red-dark); }
+.foot-cta a:hover { color: var(--red-dark); }
 .foot-cta .arrow { display: inline-block; transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1); }
 .foot-cta a:hover .arrow { transform: translateX(-8px); }
 
 .foot-cta .next-label {
-font-family: ‘Hanken Grotesk’, sans-serif;
-font-size: 0.7rem;
-letter-spacing: 0.18em;
-text-transform: uppercase;
-font-weight: 600;
-color: var(–muted);
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
 }
 
 /* ─── RESPONSIVE ───────────────────────────────────── */
 @media (max-width: 900px) {
-.journey { grid-template-columns: repeat(7, 180px); }
+  .journey { grid-template-columns: repeat(7, 180px); }
 }
 
 @media (max-width: 760px) {
-.initiative-header { grid-template-columns: 1fr; gap: 1rem; }
-.workstream { grid-template-columns: 1fr; gap: 0.75rem; }
-.ws-content { grid-template-columns: 1fr; gap: 1rem; }
-.topnav { flex-direction: column; align-items: flex-start; gap: 1rem; }
-.topnav nav { gap: 1.5rem; }
-.foot-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-.foot-meta { text-align: left; }
+  .initiative-header { grid-template-columns: 1fr; gap: 1rem; }
+  .workstream { grid-template-columns: 1fr; gap: 0.75rem; }
+  .ws-content { grid-template-columns: 1fr; gap: 1rem; }
+  .topnav { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .topnav nav { gap: 1.5rem; }
+  .foot-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .foot-meta { text-align: left; }
 }
 
 @keyframes riseUp {
-from { opacity: 0; transform: translateY(20px); }
-to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 header.hero > * { animation: riseUp 0.8s cubic-bezier(0.2, 0.7, 0.3, 1) backwards; }
 header.hero .eyebrow { animation-delay: 0.05s; }
@@ -536,331 +535,323 @@ header.hero .hero-lede { animation-delay: 0.4s; }
   </header>
 
   <!-- ════════ INITIATIVE 01 ════════ -->
-
   <section class="initiative" id="initiative-1">
     <div class="section-label">Pillar I · The Total RV Customer Experience</div>
 
-```
-<div class="initiative-header">
-  <div class="init-num">01</div>
-  <div>
-    <div class="init-tag">The customer journey, end to end</div>
-    <h2 class="init-title">From <span class="accent">first enquiry</span> to repeat customer.</h2>
-    <p class="init-lede">
-      Too many Australians buy a caravan, receive a poor hand-over, have a difficult first trip, and never come back. The industry loses these customers, and their friends, for good. We can stop that.
-    </p>
-  </div>
-</div>
+    <div class="initiative-header">
+      <div class="init-num">01</div>
+      <div>
+        <div class="init-tag">The customer journey, end to end</div>
+        <h2 class="init-title">From <span class="accent">first enquiry</span> to repeat customer.</h2>
+        <p class="init-lede">
+          Too many Australians buy a caravan, receive a poor hand-over, have a difficult first trip, and never come back. The industry loses these customers, and their friends, for good. We can stop that.
+        </p>
+      </div>
+    </div>
 
-<dl class="context-grid">
-  <div class="context-item">
-    <dt>The Problem</dt>
-    <dd>Inconsistent hand-overs, opaque after-sales support, and variable park experiences silently erode lifetime customer value across the industry.</dd>
-  </div>
-  <div class="context-item">
-    <dt>The Outcome</dt>
-    <dd>A consumer-facing website, backed by an industry-wide standard, that sets expectations and informs rights at every step of the journey.</dd>
-  </div>
-  <div class="context-item">
-    <dt>The Why</dt>
-    <dd>Repeat customers are the engine of the industry. A confident, well-informed buyer becomes an advocate; a confused one becomes a cautionary tale.</dd>
-  </div>
-  <div class="context-item">
-    <dt>The Scope</dt>
-    <dd>Seven stages, from raw materials through to the second purchase. Every stage has a custodian, every touchpoint has a standard.</dd>
-  </div>
-</dl>
+    <dl class="context-grid">
+      <div class="context-item">
+        <dt>The Problem</dt>
+        <dd>Inconsistent hand-overs, opaque after-sales support, and variable park experiences silently erode lifetime customer value across the industry.</dd>
+      </div>
+      <div class="context-item">
+        <dt>The Outcome</dt>
+        <dd>A consumer-facing website, backed by an industry-wide standard, that sets expectations and informs rights at every step of the journey.</dd>
+      </div>
+      <div class="context-item">
+        <dt>The Why</dt>
+        <dd>Repeat customers are the engine of the industry. A confident, well-informed buyer becomes an advocate; a confused one becomes a cautionary tale.</dd>
+      </div>
+      <div class="context-item">
+        <dt>The Scope</dt>
+        <dd>Seven stages, from raw materials through to the second purchase. Every stage has a custodian, every touchpoint has a standard.</dd>
+      </div>
+    </dl>
 
-<div class="journey-block">
-  <h3 class="journey-title">The Seven-Stage Journey</h3>
-  <p class="journey-subtitle">Each stage carries its own touchpoints, custodians and consumer rights.</p>
+    <div class="journey-block">
+      <h3 class="journey-title">The Seven-Stage Journey</h3>
+      <p class="journey-subtitle">Each stage carries its own touchpoints, custodians and consumer rights.</p>
 
-  <div class="journey">
-    <div class="journey-stage">
-      <div class="stage-num">Stage 01</div>
-      <div class="stage-label">Supply Chain</div>
-      <div class="stage-desc">Raw materials, chassis components, electrical systems and fit-out hardware.</div>
-      <div class="stage-pain">Quality and provenance start here.</div>
+      <div class="journey">
+        <div class="journey-stage">
+          <div class="stage-num">Stage 01</div>
+          <div class="stage-label">Supply Chain</div>
+          <div class="stage-desc">Raw materials, chassis components, electrical systems and fit-out hardware.</div>
+          <div class="stage-pain">Quality and provenance start here.</div>
+        </div>
+        <div class="journey-stage">
+          <div class="stage-num">Stage 02</div>
+          <div class="stage-label">Suppliers</div>
+          <div class="stage-desc">Component suppliers, accessory makers, technology and power infrastructure partners.</div>
+          <div class="stage-pain">Set the technical standard.</div>
+        </div>
+        <div class="journey-stage">
+          <div class="stage-num">Stage 03</div>
+          <div class="stage-label">Manufacturers</div>
+          <div class="stage-desc">Build quality, compliance, warranty terms and the promise of the brand.</div>
+          <div class="stage-pain">Promises that must be kept.</div>
+        </div>
+        <div class="journey-stage">
+          <div class="stage-num">Stage 04</div>
+          <div class="stage-label">Sales</div>
+          <div class="stage-desc">Dealership experience, finance, insurance, the hand-over, the make-or-break moment.</div>
+          <div class="stage-pain">The biggest leak in the bucket.</div>
+        </div>
+        <div class="journey-stage">
+          <div class="stage-num">Stage 05</div>
+          <div class="stage-label">After-Sales</div>
+          <div class="stage-desc">Servicing, repairs, parts, warranty claims, ongoing technical support.</div>
+          <div class="stage-pain">Trust is earned or lost here.</div>
+        </div>
+        <div class="journey-stage">
+          <div class="stage-num">Stage 06</div>
+          <div class="stage-label">Park Experience</div>
+          <div class="stage-desc">Site setup, power, amenities, hospitality. The holiday itself.</div>
+          <div class="stage-pain">Where the promise meets reality.</div>
+        </div>
+        <div class="journey-stage">
+          <div class="stage-num">Stage 07</div>
+          <div class="stage-label">Repeat Business</div>
+          <div class="stage-desc">Upgrades, advocacy, referrals, the long arc of a caravanning life.</div>
+          <div class="stage-pain">The compounding measure of success.</div>
+        </div>
+      </div>
     </div>
-    <div class="journey-stage">
-      <div class="stage-num">Stage 02</div>
-      <div class="stage-label">Suppliers</div>
-      <div class="stage-desc">Component suppliers, accessory makers, technology and power infrastructure partners.</div>
-      <div class="stage-pain">Set the technical standard.</div>
-    </div>
-    <div class="journey-stage">
-      <div class="stage-num">Stage 03</div>
-      <div class="stage-label">Manufacturers</div>
-      <div class="stage-desc">Build quality, compliance, warranty terms and the promise of the brand.</div>
-      <div class="stage-pain">Promises that must be kept.</div>
-    </div>
-    <div class="journey-stage">
-      <div class="stage-num">Stage 04</div>
-      <div class="stage-label">Sales</div>
-      <div class="stage-desc">Dealership experience, finance, insurance, the hand-over, the make-or-break moment.</div>
-      <div class="stage-pain">The biggest leak in the bucket.</div>
-    </div>
-    <div class="journey-stage">
-      <div class="stage-num">Stage 05</div>
-      <div class="stage-label">After-Sales</div>
-      <div class="stage-desc">Servicing, repairs, parts, warranty claims, ongoing technical support.</div>
-      <div class="stage-pain">Trust is earned or lost here.</div>
-    </div>
-    <div class="journey-stage">
-      <div class="stage-num">Stage 06</div>
-      <div class="stage-label">Park Experience</div>
-      <div class="stage-desc">Site setup, power, amenities, hospitality. The holiday itself.</div>
-      <div class="stage-pain">Where the promise meets reality.</div>
-    </div>
-    <div class="journey-stage">
-      <div class="stage-num">Stage 07</div>
-      <div class="stage-label">Repeat Business</div>
-      <div class="stage-desc">Upgrades, advocacy, referrals, the long arc of a caravanning life.</div>
-      <div class="stage-pain">The compounding measure of success.</div>
-    </div>
-  </div>
-</div>
 
-<div class="workstreams">
-  <div class="section-label">Workstreams</div>
-  <p class="workstreams-intro">
-    Eight workstreams to take the initiative from blank page to public launch, from understanding the customer journey through to launching the consumer-facing website and embedding the framework into ongoing industry governance.
-  </p>
+    <div class="workstreams">
+      <div class="section-label">Workstreams</div>
+      <p class="workstreams-intro">
+        Eight workstreams to take the initiative from blank page to public launch, from understanding the customer journey through to launching the consumer-facing website and embedding the framework into ongoing industry governance.
+      </p>
 
-  <article class="workstream">
-    <div class="ws-num">1.1</div>
-    <div class="ws-content">
-      <h4 class="ws-title">Journey Mapping &amp; Discovery</h4>
-      <ul class="ws-tasks">
-        <li>Run customer interviews across first-time buyers, repeat owners, and lapsed caravanners.</li>
-        <li>Build a complete journey map covering all seven stages, with emotional highs and lows.</li>
-        <li>Identify the top five leakage points where customers disengage or never return.</li>
-        <li>Quantify the commercial cost of poor hand-overs and bad first trips.</li>
-      </ul>
+      <article class="workstream">
+        <div class="ws-num">1.1</div>
+        <div class="ws-content">
+          <h4 class="ws-title">Journey Mapping &amp; Discovery</h4>
+          <ul class="ws-tasks">
+            <li>Run customer interviews across first-time buyers, repeat owners, and lapsed caravanners.</li>
+            <li>Build a complete journey map covering all seven stages, with emotional highs and lows.</li>
+            <li>Identify the top five leakage points where customers disengage or never return.</li>
+            <li>Quantify the commercial cost of poor hand-overs and bad first trips.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="workstream">
+        <div class="ws-num">1.2</div>
+        <div class="ws-content">
+          <h4 class="ws-title">Manufacturing &amp; Product Standards</h4>
+          <ul class="ws-tasks">
+            <li>Codify what 'good' looks like at the factory gate: build quality, compliance, documentation.</li>
+            <li>Map the supplier and supply-chain dependencies that drive end-customer outcomes.</li>
+            <li>Align with existing CIAA technical standards and identify any gaps.</li>
+            <li>Set a minimum documentation pack to ship with every new caravan.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="workstream">
+        <div class="ws-num">1.3</div>
+        <div class="ws-content">
+          <h4 class="ws-title">Sales &amp; Hand-Over Excellence</h4>
+          <ul class="ws-tasks">
+            <li>Define a national hand-over standard: pre-delivery inspection, customer walkthrough, follow-up cadence.</li>
+            <li>Build a hand-over checklist and a 'first-trip readiness' kit dealers can adopt.</li>
+            <li>Pilot the standard with two to three dealers and measure customer NPS uplift.</li>
+            <li>Develop a dealer accreditation pathway tied to the standard.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="workstream">
+        <div class="ws-num">1.4</div>
+        <div class="ws-content">
+          <h4 class="ws-title">After-Sales, Service &amp; Repair</h4>
+          <ul class="ws-tasks">
+            <li>Map the after-sales experience: service intervals, warranty claims, parts availability, repair turnaround.</li>
+            <li>Set transparent expectations around what consumers can expect at each service touchpoint.</li>
+            <li>Address the technician supply problem and surface the industry's skills pipeline needs.</li>
+            <li>Define a 'fair-go' standard for warranty handling that protects both consumer and manufacturer.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="workstream">
+        <div class="ws-num">1.5</div>
+        <div class="ws-content">
+          <h4 class="ws-title">Park &amp; On-Site Experience</h4>
+          <ul class="ws-tasks">
+            <li>Define the minimum park experience standard: arrival, site setup, power, amenities, departure.</li>
+            <li>Bring park operators into the framework and align with VicParks / state park associations.</li>
+            <li>Address EV and e-bike charging readiness as the fleet electrifies.</li>
+            <li>Build a shared 'park promise' that travels with consumers across the network.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="workstream">
+        <div class="ws-num">1.6</div>
+        <div class="ws-content">
+          <h4 class="ws-title">Protection &amp; Consumer Rights</h4>
+          <ul class="ws-tasks">
+            <li>Document consumer rights at each of the seven stages in plain English.</li>
+            <li>Cover insurance, warranty, ACL protections, finance disclosure, and dispute pathways.</li>
+            <li>Build a 'what to do if it goes wrong' guide that consumers actually use.</li>
+            <li>Identify gaps where the industry should self-regulate before government intervenes.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="workstream">
+        <div class="ws-num">1.7</div>
+        <div class="ws-content">
+          <h4 class="ws-title">Content, Brand &amp; Website Build</h4>
+          <ul class="ws-tasks">
+            <li>Define the consumer-facing brand, tone of voice, and information architecture for the website.</li>
+            <li>Commission plain-English guides for each stage of the journey, with practical checklists.</li>
+            <li>Design and build the website, aiming for an MVP launch within twelve months.</li>
+            <li>Plan an evergreen content programme so the site remains the trusted source over time.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="workstream">
+        <div class="ws-num">1.8</div>
+        <div class="ws-content">
+          <h4 class="ws-title">Measurement &amp; Governance</h4>
+          <ul class="ws-tasks">
+            <li>Define the small set of metrics that prove the initiative is working: NPS, repeat-purchase rate, complaint volume.</li>
+            <li>Establish quarterly reporting back to the national board.</li>
+            <li>Build the governance model for ongoing maintenance of the standard and the website.</li>
+            <li>Plan year-two evolution: what graduates from MVP, what gets added next.</li>
+          </ul>
+        </div>
+      </article>
+
     </div>
-  </article>
-
-  <article class="workstream">
-    <div class="ws-num">1.2</div>
-    <div class="ws-content">
-      <h4 class="ws-title">Manufacturing &amp; Product Standards</h4>
-      <ul class="ws-tasks">
-        <li>Codify what 'good' looks like at the factory gate: build quality, compliance, documentation.</li>
-        <li>Map the supplier and supply-chain dependencies that drive end-customer outcomes.</li>
-        <li>Align with existing CIAA technical standards and identify any gaps.</li>
-        <li>Set a minimum documentation pack to ship with every new caravan.</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="workstream">
-    <div class="ws-num">1.3</div>
-    <div class="ws-content">
-      <h4 class="ws-title">Sales &amp; Hand-Over Excellence</h4>
-      <ul class="ws-tasks">
-        <li>Define a national hand-over standard: pre-delivery inspection, customer walkthrough, follow-up cadence.</li>
-        <li>Build a hand-over checklist and a 'first-trip readiness' kit dealers can adopt.</li>
-        <li>Pilot the standard with two to three dealers and measure customer NPS uplift.</li>
-        <li>Develop a dealer accreditation pathway tied to the standard.</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="workstream">
-    <div class="ws-num">1.4</div>
-    <div class="ws-content">
-      <h4 class="ws-title">After-Sales, Service &amp; Repair</h4>
-      <ul class="ws-tasks">
-        <li>Map the after-sales experience: service intervals, warranty claims, parts availability, repair turnaround.</li>
-        <li>Set transparent expectations around what consumers can expect at each service touchpoint.</li>
-        <li>Address the technician supply problem and surface the industry's skills pipeline needs.</li>
-        <li>Define a 'fair-go' standard for warranty handling that protects both consumer and manufacturer.</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="workstream">
-    <div class="ws-num">1.5</div>
-    <div class="ws-content">
-      <h4 class="ws-title">Park &amp; On-Site Experience</h4>
-      <ul class="ws-tasks">
-        <li>Define the minimum park experience standard: arrival, site setup, power, amenities, departure.</li>
-        <li>Bring park operators into the framework and align with VicParks / state park associations.</li>
-        <li>Address EV and e-bike charging readiness as the fleet electrifies.</li>
-        <li>Build a shared 'park promise' that travels with consumers across the network.</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="workstream">
-    <div class="ws-num">1.6</div>
-    <div class="ws-content">
-      <h4 class="ws-title">Protection &amp; Consumer Rights</h4>
-      <ul class="ws-tasks">
-        <li>Document consumer rights at each of the seven stages in plain English.</li>
-        <li>Cover insurance, warranty, ACL protections, finance disclosure, and dispute pathways.</li>
-        <li>Build a 'what to do if it goes wrong' guide that consumers actually use.</li>
-        <li>Identify gaps where the industry should self-regulate before government intervenes.</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="workstream">
-    <div class="ws-num">1.7</div>
-    <div class="ws-content">
-      <h4 class="ws-title">Content, Brand &amp; Website Build</h4>
-      <ul class="ws-tasks">
-        <li>Define the consumer-facing brand, tone of voice, and information architecture for the website.</li>
-        <li>Commission plain-English guides for each stage of the journey, with practical checklists.</li>
-        <li>Design and build the website, aiming for an MVP launch within twelve months.</li>
-        <li>Plan an evergreen content programme so the site remains the trusted source over time.</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="workstream">
-    <div class="ws-num">1.8</div>
-    <div class="ws-content">
-      <h4 class="ws-title">Measurement &amp; Governance</h4>
-      <ul class="ws-tasks">
-        <li>Define the small set of metrics that prove the initiative is working: NPS, repeat-purchase rate, complaint volume.</li>
-        <li>Establish quarterly reporting back to the national board.</li>
-        <li>Build the governance model for ongoing maintenance of the standard and the website.</li>
-        <li>Plan year-two evolution: what graduates from MVP, what gets added next.</li>
-      </ul>
-    </div>
-  </article>
-
-</div>
-```
-
   </section>
 
   <!-- ════════ INITIATIVE 02 ════════ -->
-
   <section class="initiative alt" id="initiative-2">
     <div class="initiative-inner">
       <div class="section-label">Pillar III · Industry Leadership</div>
 
-```
-  <div class="initiative-header">
-    <div class="init-num">02</div>
-    <div>
-      <div class="init-tag">The Leadership Retreat</div>
-      <h2 class="init-title">Two days off the road, <span class="accent">building the road</span> ahead.</h2>
-      <p class="init-lede">
-        A peer retreat for the industry's emerging and established leaders, designed to strengthen relationships, sharpen thinking, and seed the future leadership pipeline for the sector.
-      </p>
+      <div class="initiative-header">
+        <div class="init-num">02</div>
+        <div>
+          <div class="init-tag">The Leadership Retreat</div>
+          <h2 class="init-title">Two days off the road, <span class="accent">building the road</span> ahead.</h2>
+          <p class="init-lede">
+            A peer retreat for the industry's emerging and established leaders, designed to strengthen relationships, sharpen thinking, and seed the future leadership pipeline for the sector.
+          </p>
+        </div>
+      </div>
+
+      <dl class="context-grid">
+        <div class="context-item">
+          <dt>The Purpose</dt>
+          <dd>A high-trust setting where the industry's leaders work on the industry, not in it, across two intensive days.</dd>
+        </div>
+        <div class="context-item">
+          <dt>The Audience</dt>
+          <dd>Existing senior leaders plus selected emerging leaders nominated by their companies and state associations.</dd>
+        </div>
+        <div class="context-item">
+          <dt>The Format</dt>
+          <dd>A mix of structured workshops, peer round-tables, external speakers, and unstructured time for the conversations that matter.</dd>
+        </div>
+        <div class="context-item">
+          <dt>The Outcome</dt>
+          <dd>Concrete commitments, a stronger leadership network, and a clear blueprint for an ongoing leadership development programme.</dd>
+        </div>
+      </dl>
+
+      <div class="workstreams">
+        <div class="section-label">Workstreams</div>
+        <p class="workstreams-intro">
+          Six workstreams to deliver a retreat that is genuinely memorable and produces follow-through, not just a nice weekend away.
+        </p>
+
+        <article class="workstream">
+          <div class="ws-num">2.1</div>
+          <div class="ws-content">
+            <h4 class="ws-title">Objectives &amp; Outcomes</h4>
+            <ul class="ws-tasks">
+              <li>Agree the three to five outcomes the retreat must deliver. Be specific, not aspirational.</li>
+              <li>Define the success criteria so we can measure whether the retreat worked.</li>
+              <li>Confirm the retreat's relationship to the broader leadership-development strategy.</li>
+              <li>Commit to a follow-up structure before the retreat is designed. Outcomes drive format.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="workstream">
+          <div class="ws-num">2.2</div>
+          <div class="ws-content">
+            <h4 class="ws-title">Date, Location &amp; Logistics</h4>
+            <ul class="ws-tasks">
+              <li>Lock the date, ideally outside peak trading periods and away from major industry events.</li>
+              <li>Select a venue that reflects the industry: a destination park or regional retreat over a city hotel.</li>
+              <li>Coordinate travel, accommodation, dietary requirements and accessibility for all attendees.</li>
+              <li>Manage the budget, sponsorship opportunities and cost-recovery model.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="workstream">
+          <div class="ws-num">2.3</div>
+          <div class="ws-content">
+            <h4 class="ws-title">Attendee List &amp; Engagement</h4>
+            <ul class="ws-tasks">
+              <li>Define the criteria for attendance: a balance of established leaders and emerging leaders.</li>
+              <li>Nominate and confirm the attendee list with state associations and major employers.</li>
+              <li>Run pre-retreat one-on-ones to understand each attendee's priorities and expectations.</li>
+              <li>Issue a short pre-read so the retreat starts at altitude rather than at the runway.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="workstream">
+          <div class="ws-num">2.4</div>
+          <div class="ws-content">
+            <h4 class="ws-title">Agenda &amp; Content Design</h4>
+            <ul class="ws-tasks">
+              <li>Design a two-day flow that balances structured content, peer dialogue and unstructured time.</li>
+              <li>Curate sessions on the three CIAA pillars: leadership, customer experience, innovation.</li>
+              <li>Commission external content where the industry lacks the lens: adjacent industries, futurists, regulators.</li>
+              <li>Build in protected time for relationship-building, the retreat's quiet engine.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="workstream">
+          <div class="ws-num">2.5</div>
+          <div class="ws-content">
+            <h4 class="ws-title">Facilitators &amp; Speakers</h4>
+            <ul class="ws-tasks">
+              <li>Engage a senior independent facilitator to hold the room across both days.</li>
+              <li>Brief and contract three to four guest speakers aligned to the retreat's outcomes.</li>
+              <li>Plan one 'fireside' session with a respected industry elder to ground the next generation.</li>
+              <li>Brief facilitators thoroughly. A great speaker badly briefed is a wasted slot.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="workstream">
+          <div class="ws-num">2.6</div>
+          <div class="ws-content">
+            <h4 class="ws-title">Follow-Through &amp; Pipeline</h4>
+            <ul class="ws-tasks">
+              <li>Capture the commitments made at the retreat: by whom, by when, with what support.</li>
+              <li>Run quarterly check-ins through the year following the retreat to keep momentum.</li>
+              <li>Use the retreat as the launchpad for an ongoing leadership development programme.</li>
+              <li>Feed the strongest emerging leaders into national board succession and CIAA committee roles.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
     </div>
-  </div>
-
-  <dl class="context-grid">
-    <div class="context-item">
-      <dt>The Purpose</dt>
-      <dd>A high-trust setting where the industry's leaders work on the industry, not in it, across two intensive days.</dd>
-    </div>
-    <div class="context-item">
-      <dt>The Audience</dt>
-      <dd>Existing senior leaders plus selected emerging leaders nominated by their companies and state associations.</dd>
-    </div>
-    <div class="context-item">
-      <dt>The Format</dt>
-      <dd>A mix of structured workshops, peer round-tables, external speakers, and unstructured time for the conversations that matter.</dd>
-    </div>
-    <div class="context-item">
-      <dt>The Outcome</dt>
-      <dd>Concrete commitments, a stronger leadership network, and a clear blueprint for an ongoing leadership development programme.</dd>
-    </div>
-  </dl>
-
-  <div class="workstreams">
-    <div class="section-label">Workstreams</div>
-    <p class="workstreams-intro">
-      Six workstreams to deliver a retreat that is genuinely memorable and produces follow-through, not just a nice weekend away.
-    </p>
-
-    <article class="workstream">
-      <div class="ws-num">2.1</div>
-      <div class="ws-content">
-        <h4 class="ws-title">Objectives &amp; Outcomes</h4>
-        <ul class="ws-tasks">
-          <li>Agree the three to five outcomes the retreat must deliver. Be specific, not aspirational.</li>
-          <li>Define the success criteria so we can measure whether the retreat worked.</li>
-          <li>Confirm the retreat's relationship to the broader leadership-development strategy.</li>
-          <li>Commit to a follow-up structure before the retreat is designed. Outcomes drive format.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="workstream">
-      <div class="ws-num">2.2</div>
-      <div class="ws-content">
-        <h4 class="ws-title">Date, Location &amp; Logistics</h4>
-        <ul class="ws-tasks">
-          <li>Lock the date, ideally outside peak trading periods and away from major industry events.</li>
-          <li>Select a venue that reflects the industry: a destination park or regional retreat over a city hotel.</li>
-          <li>Coordinate travel, accommodation, dietary requirements and accessibility for all attendees.</li>
-          <li>Manage the budget, sponsorship opportunities and cost-recovery model.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="workstream">
-      <div class="ws-num">2.3</div>
-      <div class="ws-content">
-        <h4 class="ws-title">Attendee List &amp; Engagement</h4>
-        <ul class="ws-tasks">
-          <li>Define the criteria for attendance: a balance of established leaders and emerging leaders.</li>
-          <li>Nominate and confirm the attendee list with state associations and major employers.</li>
-          <li>Run pre-retreat one-on-ones to understand each attendee's priorities and expectations.</li>
-          <li>Issue a short pre-read so the retreat starts at altitude rather than at the runway.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="workstream">
-      <div class="ws-num">2.4</div>
-      <div class="ws-content">
-        <h4 class="ws-title">Agenda &amp; Content Design</h4>
-        <ul class="ws-tasks">
-          <li>Design a two-day flow that balances structured content, peer dialogue and unstructured time.</li>
-          <li>Curate sessions on the three CIAA pillars: leadership, customer experience, innovation.</li>
-          <li>Commission external content where the industry lacks the lens: adjacent industries, futurists, regulators.</li>
-          <li>Build in protected time for relationship-building, the retreat's quiet engine.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="workstream">
-      <div class="ws-num">2.5</div>
-      <div class="ws-content">
-        <h4 class="ws-title">Facilitators &amp; Speakers</h4>
-        <ul class="ws-tasks">
-          <li>Engage a senior independent facilitator to hold the room across both days.</li>
-          <li>Brief and contract three to four guest speakers aligned to the retreat's outcomes.</li>
-          <li>Plan one 'fireside' session with a respected industry elder to ground the next generation.</li>
-          <li>Brief facilitators thoroughly. A great speaker badly briefed is a wasted slot.</li>
-        </ul>
-      </div>
-    </article>
-
-    <article class="workstream">
-      <div class="ws-num">2.6</div>
-      <div class="ws-content">
-        <h4 class="ws-title">Follow-Through &amp; Pipeline</h4>
-        <ul class="ws-tasks">
-          <li>Capture the commitments made at the retreat: by whom, by when, with what support.</li>
-          <li>Run quarterly check-ins through the year following the retreat to keep momentum.</li>
-          <li>Use the retreat as the launchpad for an ongoing leadership development programme.</li>
-          <li>Feed the strongest emerging leaders into national board succession and CIAA committee roles.</li>
-        </ul>
-      </div>
-    </article>
-
-  </div>
-</div>
-```
-
   </section>
 
   <footer class="foot">
